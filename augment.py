@@ -75,11 +75,6 @@ def augment_images_in_folder(input_folder, output_folder):
             shifted_img = np.clip(shifted_img, 0, 255).astype(np.uint8)
             cv2.imwrite(os.path.join(output_folder, f"{filename_without_ext}_channel_shift{file_extension}"), shifted_img)
 
-            # Apply histogram equalization
-            gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            equalized_img = cv2.equalizeHist(gray_img)
-            cv2.imwrite(os.path.join(output_folder, f"{filename_without_ext}_hist_eq{file_extension}"), equalized_img)
-
             # Apply Gaussian noise
             noise = np.random.normal(noise_mean, noise_stddev, img.shape).astype(np.uint8)
             noisy_img = cv2.add(img, noise)
