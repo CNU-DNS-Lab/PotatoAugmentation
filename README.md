@@ -76,8 +76,8 @@ image1_flip_vertical.JPG
 image1_rotate_90.JPG
 image1_brightness_0.75.JPG
 image1_contrast_-0.25.JPG
+image1_hue_shift_20.JPG
 image1_channel_shift.JPG
-image1_hist_eq.JPG
 image1_noise.JPG
 image1_untouched.JPG
 ```
